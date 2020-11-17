@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "271948058604",
+    "firebase_url": "https://apkarowery.firebaseio.com",
+    "project_id": "apkarowery",
+    "storage_bucket": "apkarowery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271948058604:android:bbbc4c9b6f8ec286c1fac9",
+        "android_client_info": {
+          "package_name": "com.example.apkarowery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271948058604-uf4av36qubvqlnjnk45t41bler2qv1nu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.apkarowery",
+            "certificate_hash": "837afc2ff1d14c2c7f71c580233a948db36b1223"
+          }
+        },
+        {
+          "client_id": "271948058604-oogfco6kfbmnkvcia2im3ugpugugv9rt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBryfamwB6Q0YePAm50iF8-EtlBIX2vPqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271948058604-oogfco6kfbmnkvcia2im3ugpugugv9rt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
