@@ -72,7 +72,7 @@
         android:background="@color/colorPrimaryDark"
         android:layout_margin="15dp"
         android:layout_alignParentBottom="true"
-        android:text="Add to Cart"
+        android:text="Dodaj do koszyka"
         android:textColor="@android:color/white"
         android:textSize="18dp"
         />

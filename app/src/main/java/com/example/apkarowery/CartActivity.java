@@ -64,8 +64,8 @@ public class CartActivity extends AppCompatActivity {
                 = new FirebaseRecyclerAdapter<Cart, CartViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
-                holder.txtProductQuantity.setText("Quantity = " + model.getQuantity());
-                holder.txtProductPrice.setText("Price" + model.getPrice() + "$");
+                holder.txtProductQuantity.setText("Ilość = " + model.getQuantity());
+                holder.txtProductPrice.setText("Cena " + model.getPrice() + "$");
                 holder.txtProductName.setText(model.getPname());
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -73,11 +73,11 @@ public class CartActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         CharSequence options[] = new CharSequence[]
                                 {
-                                        "Edit",
-                                        "Remove"
+                                        "Edytuj",
+                                        "Usuń"
                                 };
                         AlertDialog.Builder builder = new AlertDialog.Builder(CartActivity.this);
-                        builder.setTitle("Cart Oprions:");
+                        builder.setTitle("Opcje koszyka:");
 
                         builder.setItems(options, new DialogInterface.OnClickListener() {
                             @Override
