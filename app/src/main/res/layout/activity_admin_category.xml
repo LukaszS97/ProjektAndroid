@@ -70,25 +70,25 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linear3_category_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linear2_category_layout"
-        android:orientation="horizontal"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="10dp"
-        >
+    <!--<LinearLayout-->
+        <!--android:id="@+id/linear3_category_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/linear2_category_layout"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--&gt;-->
 
-        <ImageView
-            android:id="@+id/tandem"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:src="@drawable/tandem"
-            />
+        <!--<ImageView-->
+            <!--android:id="@+id/tandem"-->
+            <!--android:layout_width="150dp"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:src="@drawable/tandem"-->
+            <!--/>-->
 
-    </LinearLayout>
+    <!--</LinearLayout>-->
 
     <Button
         android:id="@+id/maintain_btn"

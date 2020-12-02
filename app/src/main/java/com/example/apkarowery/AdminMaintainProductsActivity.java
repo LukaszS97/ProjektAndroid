@@ -23,7 +23,7 @@ import java.util.HashMap;
 
 public class AdminMaintainProductsActivity extends AppCompatActivity {
 
-    private Button applyChangesBtn;
+    private Button applyChangesBtn, deleteBtn;
     private EditText name, price, description;
     private ImageView imageView;
 
@@ -47,7 +47,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
         price = findViewById(R.id.product_price_maintain);
         description = findViewById(R.id.product_description_maintain);
         imageView = findViewById(R.id.product_image_maintain);
-
+        deleteBtn = findViewById(R.id.delete_product_btn);
 
         displaySpecificProductInfo();
 
@@ -59,6 +59,24 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
             }
         });
 
+        deleteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteThisProduct();
+            }
+        });
+    }
+
+    private void deleteThisProduct() {
+        productsRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
+                startActivity(intent);
+                finish();
+                Toast.makeText(AdminMaintainProductsActivity.this, "Pomyślnie usunięto produkt", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void applyChanges() {
@@ -67,11 +85,11 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
         String pDescription = description.getText().toString();
 
         if (pName.equals("")) {
-            Toast.makeText(this, "Wpisz nazwę produktu", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Wpisz nazwe produktu", Toast.LENGTH_SHORT).show();
         } else if (pPrice.equals("")) {
-            Toast.makeText(this, "Wpisz cenę", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Wpisz cene produktu", Toast.LENGTH_SHORT).show();
         } else if (pDescription.equals("")) {
-            Toast.makeText(this, "Wpisz opis", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Wpisz opis produktu", Toast.LENGTH_SHORT).show();
         } else {
 
             HashMap<String, Object> productMap = new HashMap<>();
@@ -84,7 +102,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(AdminMaintainProductsActivity.this, "Zmiany zapisane", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminMaintainProductsActivity.this, "Pomyślnie zmieniono produkt", Toast.LENGTH_SHORT).show();
 
                         Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
                         startActivity(intent);
