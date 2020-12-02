@@ -1,4 +1,4 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Admin;
 
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.apkarowery.CartViewHolder;
 import com.example.apkarowery.Model.Cart;
+import com.example.apkarowery.R;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
