@@ -1,17 +1,23 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Buyers;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.apkarowery.R;
 import com.example.apkarowery.Model.Users;
 import com.example.apkarowery.Prevalent.Prevalent;
+import com.example.apkarowery.R;
+import com.example.apkarowery.Sellers.SellerHomeActivity;
+import com.example.apkarowery.Sellers.SellerRegistrationActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -24,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button joinNowButton, loginButton;
     private ProgressDialog loadingBar;
+    private TextView sellerBegin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
         joinNowButton = (Button) findViewById(R.id.main_join_now_btn);
         loginButton = (Button) findViewById(R.id.main_login_btn);
+        sellerBegin = (TextView) findViewById(R.id.seller_begin);
         loadingBar = new ProgressDialog(this);
 
         Paper.init(this);
@@ -40,6 +48,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        sellerBegin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SellerRegistrationActivity.class);
                 startActivity(intent);
             }
         });
@@ -65,6 +81,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(firebaseUser!=null) {
+            Intent intent = new Intent(MainActivity.this, SellerHomeActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+        }
     }
 
     private void AllowAccess(final String phone, final String password) {

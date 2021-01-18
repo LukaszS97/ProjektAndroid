@@ -1,4 +1,4 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Buyers;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +15,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.apkarowery.R;
 
+import com.example.apkarowery.CartViewHolder;
 import com.example.apkarowery.Model.Cart;
 import com.example.apkarowery.Prevalent.Prevalent;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;

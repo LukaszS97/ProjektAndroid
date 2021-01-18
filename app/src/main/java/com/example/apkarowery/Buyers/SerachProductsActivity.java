@@ -1,4 +1,4 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Buyers;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -11,8 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-
+import com.example.apkarowery.R;
 import com.example.apkarowery.Model.Products;
+import com.example.apkarowery.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;

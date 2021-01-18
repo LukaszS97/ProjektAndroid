@@ -1,4 +1,4 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Buyers;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.apkarowery.R;
 
 import com.example.apkarowery.Prevalent.Prevalent;
 import com.google.android.gms.tasks.OnCompleteListener;

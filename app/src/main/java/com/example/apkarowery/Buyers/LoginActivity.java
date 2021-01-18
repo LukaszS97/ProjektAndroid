@@ -1,4 +1,4 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Buyers;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -11,8 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.example.apkarowery.R;
 
-import com.example.apkarowery.Admin.AdminCategoryActivity;
+import com.example.apkarowery.Sellers.SellerProductCategoryActivity;
 import com.example.apkarowery.Model.Users;
 import com.example.apkarowery.Prevalent.Prevalent;
 import com.google.firebase.database.DataSnapshot;
@@ -128,7 +129,7 @@ public class LoginActivity extends AppCompatActivity {
                                 Toast.makeText(LoginActivity.this, "Welcome Admin you are logged in successfully", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
-                                Intent intent = new Intent(LoginActivity.this, AdminCategoryActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, SellerProductCategoryActivity.class);
                                 startActivity(intent);
                             }else if(parentDbName.equals("Users")){
                                 Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();

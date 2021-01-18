@@ -1,4 +1,4 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Buyers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,11 +18,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import com.example.apkarowery.R;
 
 
 import com.example.apkarowery.Admin.AdminMaintainProductsActivity;
 import com.example.apkarowery.Model.Products;
 import com.example.apkarowery.Prevalent.Prevalent;
+import com.example.apkarowery.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;

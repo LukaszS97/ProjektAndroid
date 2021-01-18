@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.apkarowery.R;
+import com.example.apkarowery.Sellers.SellerProductCategoryActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -72,7 +73,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
         productsRef.removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
+                Intent intent = new Intent(AdminMaintainProductsActivity.this, SellerProductCategoryActivity.class);
                 startActivity(intent);
                 finish();
                 Toast.makeText(AdminMaintainProductsActivity.this, "Pomyślnie usunięto produkt", Toast.LENGTH_SHORT).show();
@@ -105,7 +106,7 @@ public class AdminMaintainProductsActivity extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         Toast.makeText(AdminMaintainProductsActivity.this, "Pomyślnie zmieniono produkt", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(AdminMaintainProductsActivity.this, AdminCategoryActivity.class);
+                        Intent intent = new Intent(AdminMaintainProductsActivity.this, SellerProductCategoryActivity.class);
                         startActivity(intent);
                         finish();
                     }

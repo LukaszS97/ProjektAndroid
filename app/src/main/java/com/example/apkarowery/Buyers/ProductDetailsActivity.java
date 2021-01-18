@@ -1,4 +1,4 @@
-package com.example.apkarowery;
+package com.example.apkarowery.Buyers;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import com.example.apkarowery.R;
 import com.cepheuen.elegantnumberbutton.view.ElegantNumberButton;
 import com.example.apkarowery.Model.Products;
 import com.example.apkarowery.Prevalent.Prevalent;

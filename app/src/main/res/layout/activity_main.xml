@@ -5,49 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".MainActivity">
+    tools:context=".Buyers.MainActivity">
 
-    
+
     <ImageView
         android:id="@+id/app_logo"
-        android:layout_width="300dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="350dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/rower"
-        />
-    
+        android:layout_marginTop="30dp"
+        android:src="@drawable/rowertlo" />
+
     <TextView
         android:id="@+id/app_slogan"
-        android:layout_width="220dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="88dp"
-        android:layout_marginTop="170dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="0dp"
         android:text="Wyszukaj, wybierz i zakup swój wymarzony rower."
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
-        android:textSize="22sp"
-        android:textStyle="bold|italic"
-        />
-
-    <Button
-        android:id="@+id/main_login_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/buttons"
-        android:padding="20dp"
-        android:textAllCaps="false"
-        android:textSize="18sp"
-        android:text="Masz już konto? Zaloguj się!"
-        android:textColor="@android:color/white"
-        />
+        android:textSize="24sp"
+        android:textStyle="bold|italic" />
 
     <Button
         android:id="@+id/main_join_now_btn"
@@ -57,12 +38,45 @@
         android:layout_marginBottom="5dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/buttons"
+        android:background="@drawable/input_design"
         android:padding="20dp"
         android:textAllCaps="false"
         android:textSize="18sp"
         android:text="Zarejestruj się!"
+        android:textColor="@color/colorPrimary"
+        />
+
+    <Button
+        android:id="@+id/main_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seller_begin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/buttons"
+        android:padding="20dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:text="Masz już konto? Zaloguj się"
         android:textColor="@android:color/white"
         />
-    
+
+    <TextView
+        android:id="@+id/seller_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chcesz zacząć sprzedawać?"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="17dp"
+        android:layout_marginBottom="10dp"
+        />
+
+
 </RelativeLayout>
