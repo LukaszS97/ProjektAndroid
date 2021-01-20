@@ -23,41 +23,7 @@ public class SellerProductCategoryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_seller_add_category);
-
-//        LogoutBtn = (Button) findViewById(R.id.admin_logout_btn);
-//        CheckOrdersBtn = (Button) findViewById(R.id.check_orders_btn);
-//        maintainProductsBtn = (Button) findViewById(R.id.maintain_btn);
-//
-//
-//        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(SellerProductCategoryActivity.this, HomeActivity.class);
-//                intent.putExtra("Admin","Admin");
-//                startActivity(intent);
-//            }
-//        });
-//
-//
-//
-//        LogoutBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(SellerProductCategoryActivity.this, MainActivity.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                startActivity(intent);
-//                finish();
-//            }
-//        });
-//
-//        CheckOrdersBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(SellerProductCategoryActivity.this, AdminNewOrdersActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        setContentView(R.layout.activity_seller_product_category);
 
 
         rowerszosowy = (ImageView) findViewById(R.id.rowerszosowy);

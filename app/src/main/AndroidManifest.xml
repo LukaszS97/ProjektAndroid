@@ -4,12 +4,14 @@
 
     <application
         android:allowBackup="true"
+        android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:hardwareAccelerated="false"
         android:theme="@style/AppTheme">
+        <activity android:name=".Admin.AdminHomeActivity"></activity>
+        <activity android:name=".Admin.AdminCheckNewProductsActivity" />
         <activity android:name=".Buyers.ResetPasswordActivity" />
         <activity android:name=".Buyers.SerachProductsActivity" />
         <activity android:name=".Buyers.ConfirmFinalOrderActivity" />
@@ -17,7 +19,6 @@
         <activity android:name=".Admin.AdminNewOrdersActivity" />
         <activity android:name=".Admin.AdminMaintainProductsActivity" />
         <activity android:name=".Buyers.SettinsActivity" />
-
         <activity
             android:name=".Buyers.HomeActivity"
             android:label="@string/title_activity_home"
@@ -40,7 +41,7 @@
         <activity android:name=".Buyers.ProductDetailsActivity" />
         <activity android:name=".Sellers.SellerHomeActivity" />
         <activity android:name=".Sellers.SellerLoginActivity" />
-        <activity android:name=".Sellers.SellerRegistrationActivity"></activity>
+        <activity android:name=".Sellers.SellerRegistrationActivity" />
     </application>
 
 </manifest>
